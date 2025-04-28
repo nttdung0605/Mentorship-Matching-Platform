@@ -38,7 +38,7 @@ The **Mentorship Matching Platform** is a web application designed to connect me
 
 ## Deployed URL
 The application is deployed and accessible at:
-[https://your-deployed-url.com](https://your-deployed-url.com)
+[mentorship-matching-platform-theta.vercel.app](mentorship-matching-platform-theta.vercel.app)
 
 ---
 
@@ -75,7 +75,7 @@ src/
 ├── pages/
 │   ├── signup.html
 │   ├── login.html
-├── mainpage.html
+├── index.html
 ```
 
 ---
@@ -102,6 +102,6 @@ src/
 ## Contact
 For questions or feedback, please contact:
 - **Name**: Dung Nguyen
-- **Email**: your.email@example.com
-- **GitHub**: [https://github.com/your-username](https://github.com/your-username)
+- **Email**: nttdung0605@gmail.com
+- **GitHub**: [https://github.com/nttdung0605](https://github.com/nttdung0605)
 ```
