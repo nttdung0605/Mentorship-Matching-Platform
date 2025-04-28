@@ -1,0 +1,313 @@
+/* Profile Page Styles */
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: row;
+}
+
+.profile-picture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    border-radius: 50%;
+    margin-right: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.profile-picture button.edit-picture-btn {
+    background-color: #0A157A;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    gap: 10px;
+    border-radius: 50%;
+    margin-right: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-details p {
+    font-weight: bold;
+    margin: 0;
+}
+
+.profile-details p span {
+    font-weight: normal;
+    margin-left: 10px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.profile-details div {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.profile-details div button.edit-profile-btn {
+    background-color: #0A157A;
+    color: white;
+    border: none;
+    width: 100px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.profile-bio {
+    display: flex;
+    flex-direction: column;
+    width: 710px;
+    margin-top: 20px;
+    gap: 10px;
+    border-radius: 50%;
+    margin-right: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-bio div.bio-header {
+    display: flex;
+    align-items: center;
+}
+
+.profile-bio div.bio-header h2 {
+    flex: 1;
+    font-size: 20px;
+    margin: 0 0 10px 0;
+}
+
+.profile-bio div.bio-header button {
+    background-color: #0A157A;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.profile-bio textarea {
+    width: 90%;
+    height: 150px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    resize: none;
+    outline: none;
+}
+
+/* Profile edit window Styles */
+/* Overlay to blur the background */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(5px);
+    z-index: 999; 
+    display: none;
+}
+
+/* Center the edit window */
+.edit-window {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    z-index: 1000; 
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none; 
+}
+
+.edit-window div.edit-window-header,
+.edit-window div.edit-window-content {
+    font-weight: bold;
+}
+
+.edit-window div.edit-window-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.edit-window-content div {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+    margin-bottom: 15px;
+}
+
+.edit-window-content label {
+    width: 50px;
+    text-align: right; 
+}
+
+.edit-window-content input,
+.edit-window-content select,
+.edit-window-content button {
+    flex: 1; 
+    padding: 8px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    font-size: 14px; 
+}
+
+/* Overlay for interest selector */
+.interest-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250%;
+    height: 100%;
+    backdrop-filter: blur(5px); 
+    z-index: 999; 
+    display: none; 
+}
+
+/* Center the interest selector */
+.interest-selector {
+    position: fixed;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%); 
+    z-index: 1000; 
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none; 
+    max-width: 90%;
+    max-height: 80%;
+    overflow-y: auto; 
+}
+
+.interest-selector div {
+    display: block;
+}
+
+.interest-btn {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.interest-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.interest-btn.selected {
+    background-color: #0A157A;
+    color: white;
+    border-color: #08125a;
+}
+
+.edit-window button.save-changes-btn {
+    background-color: #0A157A;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.edit-window button.cancel-changes-btn {
+    background-color: #ccc;
+    color: #0A157A;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .profile-details {
+        width: 400px;
+    }
+
+    .profile-bio {
+        width: 610px;
+    }
+}
+
+@media (max-width: 430px) {
+    .profile-picture {
+        margin: 0;
+    }
+    
+    .profile-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin: 0;
+    }
+
+    .profile-details {
+        width: 280px;
+        margin: 0;
+    }
+
+    .profile-bio {
+        width: 280px;
+        margin: 0;
+    }
+
+    .interest-overlay {
+        width: 150%;
+    }
+
+    .interest-selector {
+        left: 35%;
+    }
+}

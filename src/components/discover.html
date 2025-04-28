@@ -1,0 +1,102 @@
+<div class="discover-container">
+    <div class="discover-left">
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search for Name">
+            <button id="search-button" onclick="searchName()">Search</button>
+        </div>
+        <button class="filter-select" onclick="filterBoxOpen()">Filter</button>
+        <div class="filter-box" style="display: none;">
+            <label for="filter-select">Role: </label>
+            <select id="filter-select">
+                <option value="all">All</option>
+                <option value="mentor">Mentor</option>
+                <option value="mentee">Mentee</option>
+            </select>
+            <label for="interest-filter">Interests:</label>
+            <select id="interest-filter" multiple size="10">
+                <optgroup label="Arts & Creativity">
+                    <option value="painting">Painting</option>
+                    <option value="graphic-design">Graphic Design</option>
+                    <option value="photography">Photography</option>
+                    <option value="filmmaking">Filmmaking / Video Editing</option>
+                    <option value="writing">Writing (blogging, fiction, poetry)</option>
+                    <option value="music">Music (singing, playing instruments)</option>
+                </optgroup>
+                <optgroup label="Sports & Physical Activities">
+                    <option value="running">Running</option>
+                    <option value="gym-fitness">Gym / Fitness</option>
+                    <option value="swimming">Swimming</option>
+                    <option value="football">Football (Soccer)</option>
+                    <option value="basketball">Basketball</option>
+                    <option value="tennis">Tennis</option>
+                    <option value="yoga-meditation">Yoga, Meditation</option>
+                    <option value="hiking-trekking">Hiking, Trekking</option>
+                    <option value="cycling">Cycling</option>
+                </optgroup>
+                <optgroup label="Digital Entertainment">
+                    <option value="gaming">Gaming (PC, Console, Mobile)</option>
+                    <option value="movies-tv">Watching Movies / TV Series</option>
+                    <option value="manga-anime">Reading Manga / Watching Anime</option>
+                    <option value="podcasts">Listening to Podcasts</option>
+                    <option value="streaming">Streaming (Twitch, YouTube)</option>
+                </optgroup>
+                <optgroup label="Learning & Personal Growth">
+                    <option value="reading-books">Reading Books</option>
+                    <option value="foreign-languages">Learning Foreign Languages</option>
+                    <option value="coding-programming">Coding / Programming</option>
+                    <option value="science-technology">Science & Technology</option>
+                    <option value="psychology">Psychology</option>
+                    <option value="investing-finance">Investing & Finance</option>
+                    <option value="marketing-business">Marketing & Business</option>
+                </optgroup>
+                <optgroup label="Travel & Exploration">
+                    <option value="traveling-abroad">Traveling Abroad</option>
+                    <option value="food-tours">Food Tours (exploring local cuisine)</option>
+                    <option value="nature-exploration">Nature Exploration</option>
+                    <option value="travel-photography">Travel Photography</option>
+                </optgroup>
+                <optgroup label="Food & Lifestyle">
+                    <option value="cooking">Cooking</option>
+                    <option value="baking">Baking</option>
+                    <option value="diy-crafts">DIY Crafts</option>
+                    <option value="gardening">Gardening</option>
+                    <option value="pet-care">Pet Care (dogs, cats, fish)</option>
+                </optgroup>
+                <optgroup label="Other Interests">
+                    <option value="chess">Chess</option>
+                    <option value="board-games">Playing Board Games</option>
+                    <option value="model-building">Model Building (LEGO, Gundam)</option>
+                    <option value="journaling">Journaling</option>
+                    <option value="magic-tricks">Magic Tricks</option>
+                    <option value="collecting">Collecting (stamps, coins, paintings, antiques)</option>
+                </optgroup>
+            </select>
+            <div>
+                <button class="apply-btn" id="apply-btn" onclick="applyFilters()">Apply</button> 
+                <button class="cancel-btn" id="cancel-btn" onclick="filterBoxClose()">Cancel</button> 
+            </div>
+        </div>
+    </div>
+    <div class="discover-right">
+        <div id="user-list">
+            <div class="user-info-1">
+                <h3 class="user-name">John Doe</h3>
+                <p class="user-mail">Email: john.doe@example.com</p>
+                <p class="user-phone">Phone: +1234567890</p>
+                <p class="user-role">Role: Mentor</p>
+                <p class="user-skills">Skills: Web Development, Graphic Design</p>
+                <p class="user-interests">Interests: Coding, Photography, Traveling</p>
+                <p class="user-bio">Bio: Passionate about teaching and sharing knowledge. Loves exploring new technologies and creative pursuits.</p>
+            </div>
+            <div class="user-info-2">
+                <h3 class="user-name">Jane Smith</h3>
+                <p class="user-mail">Email: jane.smith@example.com</p>
+                <p class="user-phone">Phone: +9876543210</p>
+                <p class="user-role">Role: Mentee</p>
+                <p class="user-skills">Skills: Content Writing, Social Media Management</p>
+                <p class="user-interests">Interests: Blogging, Yoga, Reading Books</p>
+                <p class="user-bio">Bio: Enthusiastic learner looking to grow in the field of digital marketing. Enjoys creative writing and mindfulness practices.</p>
+            </div>
+        </div>
+    </div>
+</div>

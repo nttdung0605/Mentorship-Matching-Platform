@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentorship Matching Platform</title>
+
+    <!-- Link to CSS file for styling and Font --> 
+    <link rel="stylesheet" href="css/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="left-side">
+            <header>
+                <h1>Mentorship Matching Platform</h1>
+                <div>
+                    <p>Don't have an account?<button type="button" onclick="location.href='/signup.html'">Sign Up</button></p>
+                </div>
+            </header>
+            
+            <main>
+                <h2>Account Log In</h2>
+                <p>PLEASE LOG IN TO CONTINUE TO YOUR ACCOUNT</p>
+                <form action="/login" method="POST" id="login-form">
+                    <div>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div>
+                        <input type="password" id="password" name="password" placeholder="Password" required>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="remember" name="remember">
+                        <label for="remember">Remember me</label>
+                        
+                        <a href="/forgot-password">Forgot Password?</a>
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
+            </main>
+        </div>
+        <div class="banner">
+        </div>
+    </div>
+</body>
+<script src="js/login.js"></script>
+</html>

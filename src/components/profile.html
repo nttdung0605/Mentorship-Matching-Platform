@@ -1,0 +1,143 @@
+<div class="profile-container">
+    <!-- Profile info with user's picture and information -->
+    <div class="profile-info">
+        <div class="profile-picture">
+            <img src="../img/default.png" alt="Profile Picture">
+            <button class="edit-picture-btn" onclick="editProfilePicture()">Edit Picture</button>
+        </div>
+        <div class="profile-details">
+            <p for="user-name">Name: <span id="user-name"></span></p>
+            <p for="user-mail">Mail: <span id="user-mail"></span></p>
+            <p for="user-phone">Phone: <span id="user-phone"></span></p>
+            <p for="user-role">Role: <span id="user-role"></span></p>
+            <p for="user-skill">Skills: <span id="user-skill"></span></p>
+            <p for="user-interest">Interest: <span id="user-interest"></span></p>
+            <div>
+                <button class="edit-profile-btn" onclick="editProfile()">Edit Profile</button>
+            </div>
+        </div>      
+    </div>
+    <!-- Profile bio -->
+    <div class="profile-bio">
+        <div class="bio-header">
+            <h2>Bio</h2>
+            <button class="edit-bio-btn" id="edit-bio-btn" onclick="editBio()">Change</button>
+            <button class="save-bio-btn" id="save-bio-btn" onclick="saveBio()" style="display: none;">Save</button>
+            <button class="cancel-bio-btn" id="cancel-bio-btn" onclick="cancelBio()" style="display: none;">Cancel</button>
+        </div>
+        <textarea id="bio-textarea" rows="4" placeholder="Write your bio here..." readonly></textarea>
+    </div>
+</div>
+
+
+<!-- Edit profile window -->
+<div class="overlay" id="overlay" style="display: none;"></div>
+    <div class="edit-window" id="edit-window">
+    <div class="edit-window-header">Edit Profile</div>
+    <div class="edit-window-content">
+        <div>
+            <label for="edit-name">Name:</label>
+            <input type="text" id="edit-name" placeholder="Enter your name">
+        </div>
+        <div>
+            <label for="edit-mail">Mail:</label>
+            <input type="email" id="edit-mail" placeholder="Enter your email">
+        </div>
+        <div>
+            <label for="edit-phone">Phone:</label>
+            <input type="tel" id="edit-phone" placeholder="Enter your phone number">
+        </div>
+        <div>
+            <label for="edit-role">Role:</label>
+            <select id="edit-role">
+            <option value="">Select Role</option>
+            <option value="Mentor">Mentor</option>
+            <option value="Mentee">Mentee</option>
+            </select>
+        </div>
+        <div>
+            <label for="edit-skill">Skills:</label>
+            <input type="text" id="edit-skill" placeholder="Enter your skills">
+        </div>
+        <div>
+            <label for="edit-interest">Interest:</label>
+            <button id="edit-interest-btn" onclick="openInterestSelector()">Select Interests</button>
+            <div class="interest-overlay" id="interest-overlay" style="display: none;">
+                <div id="interest-selector" class="interest-selector">
+                    <h3>Select Your Interests</h3>
+                    <div class="interest-category">
+                        <h4>Arts & Creativity</h4>
+                        <button class="interest-btn" data-value="Painting" onclick="toggleInterest(this)">Painting</button>
+                        <button class="interest-btn" data-value="Graphic Design" onclick="toggleInterest(this)">Graphic Design</button>
+                        <button class="interest-btn" data-value="Photography" onclick="toggleInterest(this)">Photography</button>
+                        <button class="interest-btn" data-value="Filmmaking / Video Editing" onclick="toggleInterest(this)">Filmmaking / Video Editing</button>
+                        <button class="interest-btn" data-value="Writing (blogging, fiction, poetry)" onclick="toggleInterest(this)">Writing (blogging, fiction, poetry)</button>
+                        <button class="interest-btn" data-value="Music (singing, playing instruments)" onclick="toggleInterest(this)">Music (singing, playing instruments)</button>
+                    </div>
+                    <div class="interest-category">
+                        <h4>Sports & Physical Activities</h4>
+                        <button class="interest-btn" data-value="Running" onclick="toggleInterest(this)">Running</button>
+                        <button class="interest-btn" data-value="Gym / Fitness" onclick="toggleInterest(this)">Gym / Fitness</button>
+                        <button class="interest-btn" data-value="Swimming" onclick="toggleInterest(this)">Swimming</button>
+                        <button class="interest-btn" data-value="Football (Soccer)" onclick="toggleInterest(this)">Football (Soccer)</button>
+                        <button class="interest-btn" data-value="Basketball" onclick="toggleInterest(this)">Basketball</button>
+                        <button class="interest-btn" data-value="Tennis" onclick="toggleInterest(this)">Tennis</button>
+                        <button class="interest-btn" data-value="Yoga" onclick="toggleInterest(this)">Yoga</button>
+                        <button class="interest-btn" data-value="Meditation" onclick="toggleInterest(this)">Meditation</button>
+                        <button class="interest-btn" data-value="Hiking" onclick="toggleInterest(this)">Hiking</button>
+                        <button class="interest-btn" data-value="Trekking" onclick="toggleInterest(this)">Trekking</button>
+                        <button class="interest-btn" data-value="Cycling" onclick="toggleInterest(this)">Cycling</button>
+                    </div>
+                    <div class="interest-category">
+                        <h4>Digital Entertainment</h4>
+                        <button class="interest-btn" data-value="Gaming (PC, Console, Mobile)" onclick="toggleInterest(this)">Gaming (PC, Console, Mobile)</button>
+                        <button class="interest-btn" data-value="Watching Movies / TV Series" onclick="toggleInterest(this)">Watching Movies / TV Series</button>
+                        <button class="interest-btn" data-value="Reading Manga / Watching Anime" onclick="toggleInterest(this)">Reading Manga / Watching Anime</button>
+                        <button class="interest-btn" data-value="Listening to Podcasts" onclick="toggleInterest(this)">Listening to Podcasts</button>
+                        <button class="interest-btn" data-value="Streaming (Twitch, YouTube)" onclick="toggleInterest(this)">Streaming (Twitch, YouTube)</button>
+                    </div>
+                    <div class="interest-category">
+                        <h4>Learning & Personal Growth</h4>
+                        <button class="interest-btn" data-value="Reading Books" onclick="toggleInterest(this)">Reading Books</button>
+                        <button class="interest-btn" data-value="Learning Foreign Languages" onclick="toggleInterest(this)">Learning Foreign Languages</button>
+                        <button class="interest-btn" data-value="Coding / Programming" onclick="toggleInterest(this)">Coding / Programming</button>
+                        <button class="interest-btn" data-value="Science & Technology" onclick="toggleInterest(this)">Science & Technology</button>
+                        <button class="interest-btn" data-value="Psychology" onclick="toggleInterest(this)">Psychology</button>
+                        <button class="interest-btn" data-value="Investing & Finance" onclick="toggleInterest(this)">Investing & Finance</button>
+                        <button class="interest-btn" data-value="Marketing & Business" onclick="toggleInterest(this)">Marketing & Business</button>
+                    </div>
+                    <div class="interest-category">
+                        <h4>Travel & Exploration</h4>
+                        <button class="interest-btn" data-value="Traveling Abroad" onclick="toggleInterest(this)">Traveling Abroad</button>
+                        <button class="interest-btn" data-value="Food Tours (exploring local cuisine)" onclick="toggleInterest(this)">Food Tours (exploring local cuisine)</button>
+                        <button class="interest-btn" data-value="Nature Exploration" onclick="toggleInterest(this)">Nature Exploration</button>
+                        <button class="interest-btn" data-value="Travel Photography" onclick="toggleInterest(this)">Travel Photography</button>
+                    </div>
+                    <div class="interest-category">
+                        <h4>Food & Lifestyle</h4>
+                        <button class="interest-btn" data-value="Cooking" onclick="toggleInterest(this)">Cooking</button>
+                        <button class="interest-btn" data-value="Baking" onclick="toggleInterest(this)">Baking</button>
+                        <button class="interest-btn" data-value="DIY Crafts" onclick="toggleInterest(this)">DIY Crafts</button>
+                        <button class="interest-btn" data-value="Gardening" onclick="toggleInterest(this)">Gardening</button>
+                        <button class="interest-btn" data-value="Pet Care (dogs, cats, fish)" onclick="toggleInterest(this)">Pet Care (dogs, cats, fish)</button>
+                    </div>
+                    <div class="interest-category">
+                        <h4>Other Interests</h4>
+                        <button class="interest-btn" data-value="Chess" onclick="toggleInterest(this)">Chess</button>
+                        <button class="interest-btn" data-value="Playing Board Games" onclick="toggleInterest(this)">Playing Board Games</button>
+                        <button class="interest-btn" data-value="Model Building (LEGO, Gundam)" onclick="toggleInterest(this)">Model Building (LEGO, Gundam)</button>
+                        <button class="interest-btn" data-value="Journaling" onclick="toggleInterest(this)">Journaling</button>
+                        <button class="interest-btn" data-value="Magic Tricks" onclick="toggleInterest(this)">Magic Tricks</button>
+                        <button class="interest-btn" data-value="Collecting (stamps, coins, paintings, antiques)" onclick="toggleInterest(this)">Collecting (stamps, coins, paintings, antiques)</button>
+                    </div>
+                    <button onclick="saveSelectedInterests()">Save</button>
+                    <button onclick="closeInterestSelector()">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="save-changes-btn" onclick="saveChanges()">Save Changes</button>
+    <button class="cancel-changes-btn" onclick="cancelChanges()">Cancel</button>
+    </div>
+</div>
+

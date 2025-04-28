@@ -1,0 +1,51 @@
+/* General styles */
+html { height: 100%; }
+
+body {
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F1F4FE;
+    color: #333;
+    height: 100%;
+}
+
+.container {
+    align-items: center;
+    height: 100%;
+}
+
+/* banner styles */
+.banner {
+    width: 100%; /* Full-width banner */
+    height: 100%; /* Adjust height as needed */
+    background-color: #0A157A; /* Background color */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Text color */
+    text-align: center;
+}
+
+.banner-text {
+    font-size: 24px; /* Adjust font size */
+    font-weight: bold;
+    margin-bottom: 20px; /* Space between text and button */
+}
+
+.banner-btn {
+    background-color: white;
+    color: #0A157A;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.banner-btn:hover {
+    background-color: #07105C;
+    color: white;
+}

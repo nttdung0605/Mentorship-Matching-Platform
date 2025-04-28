@@ -1,0 +1,228 @@
+.discover-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.discover-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 50%;
+    margin-right: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Search bar styles */
+.search-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #0A157A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #08125a;
+}
+
+/* Filter button styles */
+.filter-select {
+    padding: 10px 20px;
+    background-color: #0A157A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.filter-select:hover {
+    background-color: #08125a;
+}
+
+/* Filter box styles */
+.filter-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filter-box label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.filter-box select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.filter-box select:focus {
+    outline: none;
+    border-color: #0A157A;
+    box-shadow: 0 0 4px rgba(10, 21, 122, 0.5);
+}
+
+/* Apply button styles */
+.apply-btn {
+    padding: 10px 20px;
+    background-color: #0A157A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.apply-btn:hover {
+    background-color: #08125a; 
+    transform: scale(1.05); 
+}
+
+.apply-btn:active {
+    background-color: #050a3a; 
+    transform: scale(0.95); 
+}
+
+/* Cancel button styles */
+.cancel-btn {
+    padding: 10px 20px;
+    background-color: #ccc; 
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cancel-btn:hover {
+    background-color: #bbb; 
+    transform: scale(1.05); 
+}
+
+.cancel-btn:active {
+    background-color: #999; 
+    transform: scale(0.95); 
+}
+
+.discover-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1; /* Take up remaining space */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Add scroll if content overflows */
+    max-height: 80vh; /* Limit height for better usability */
+}
+
+/* User list container */
+#user-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Individual user info card */
+.user-info-1,
+.user-info-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.user-info-1:hover,
+.user-info-2:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* User name styles */
+.user-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0A157A;
+    margin: 0;
+}
+
+/* User details (email, phone, role, etc.) */
+.user-mail,
+.user-phone,
+.user-role,
+.user-skills,
+.user-interests,
+.user-bio {
+    font-size: 14px;
+    color: #333;
+    margin: 0;
+}
+
+/* Highlight role and skills */
+.user-role {
+    font-weight: bold;
+    color: #0A157A;
+}
+
+.user-skills {
+    font-style: italic;
+    color: #555;
+}
+
+/* Bio styles */
+.user-bio {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.5;
+    margin-top: 10px;
+}
