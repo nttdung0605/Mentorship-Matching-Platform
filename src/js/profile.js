@@ -161,6 +161,20 @@ function saveChanges() {
     const skills = document.getElementById('edit-skill').value;
     const interests = document.getElementById('user-interest').textContent; 
 
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(mail)) {
+        alert('Invalid email format. Please update your email.');
+        return; // Stop execution if email is invalid
+    }
+
+    // Validate phone number format (e.g., 10 digits)
+    const phoneRegex = /^\d{10}$/;
+    if (!phoneRegex.test(phone)) {
+        alert('Invalid phone number format. Please update your phone number.');
+        return; // Stop execution if phone number is invalid
+    }
+
     // Save the updated information to localStorage
     const userInfo = { name, mail, phone, role, skills, interests };
     localStorage.setItem('userInfo', JSON.stringify(userInfo));
