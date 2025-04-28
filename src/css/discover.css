@@ -226,3 +226,20 @@
     line-height: 1.5;
     margin-top: 10px;
 }
+
+@media screen and (max-width: 768px) {
+    .discover-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .discover-left {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .discover-right {
+        width: 100%;
+    }
+    
+}

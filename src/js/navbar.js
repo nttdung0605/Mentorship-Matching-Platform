@@ -11,5 +11,13 @@ function toggleUserMenu() {
 }
 
 function discoverAlert() {
-    alert("Please log in to access the discover page.");
+    const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+
+    if (loggedInUser) {
+        loadDiscoveryPage()
+    }
+    else {
+        alert("Please log in to access the discover page.");
+    }
+    
 }
