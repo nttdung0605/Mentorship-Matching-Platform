@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
             localStorage.setItem('userInfo', JSON.stringify(userInfo));
 
             alert('Signup successful! You can now log in.');
-            location.href = '/login.html'; // Redirect to login page
+            location.href = '../pages/login.html'; // Redirect to login page
         });
     } else {
         console.error('Signup form not found in the DOM.');
