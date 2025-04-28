@@ -10,3 +10,6 @@ function toggleUserMenu() {
     dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
 }
 
+function discoverAlert() {
+    alert("Please log in to access the discover page.");
+}

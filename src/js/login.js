@@ -12,7 +12,7 @@ document.getElementById('login-form').addEventListener('submit', function (e) {
         // Save logged-in user info in localStorage
         localStorage.setItem('loggedInUser', JSON.stringify(user));
         alert('Login successful!');
-        location.href = '/mainpage.html'; // Redirect to main page
+        location.href = '/index.html'; // Redirect to main page
     } else {
         alert('Invalid email or password.');
     }

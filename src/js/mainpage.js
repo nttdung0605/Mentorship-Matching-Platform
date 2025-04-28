@@ -84,5 +84,16 @@ function loadDiscoveryPage() {
 function logout() {
     localStorage.removeItem('loggedInUser'); // Clear logged-in user
     alert('You have been logged out.');
-    location.href = '/mainpage.html'; 
+    location.href = '/index.html'; 
+}
+
+function bannerStart() {
+    const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+
+    if (loggedInUser) {
+        loadDiscoveryPage()
+    }
+    else {
+        location.href = '../pages/signup.html';
+    }
 }
